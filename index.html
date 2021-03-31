@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>make a list!</title>
+    <link rel="stylesheet" href="todo2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">   
+</head>
+
+<body>
+   
+    <main>
+
+         <header>
+             <h1>to do list</h1>
+
+            <div class="menu">
+                <form class= 'title-form' action="">
+                    
+                    <input class = 'title-area' name = 'title' type="text" placeholder='"create your list"'>
+                    <!-- <button type= 'submit' class='menu add'>+</button> -->
+                </form>
+            </div>
+
+         </header>
+        
+         <div class="col init">
+                <button class='yellow'></button>
+                <button class='blue'></button>
+                <button class='green'></button>
+
+            </div>
+         <div class='todo-cont init'> 
+           
+             
+             <article class="todo-box init">
+
+                <header class='todo-head'>
+                    <p class='goal'>title</p>
+                    <p class='date'>date</p>
+                </header>
+
+                <form class = 'list-form' action="" method="GET">
+                    <input class = 'input-area' type="text" name='todos' placeholder=" write your goals">
+                    <button type='submit'>add</button>
+                </form>
+                
+                <ul class = 'todo-lists'>   
+        
+                </ul>
+
+            </article>
+         </div>
+
+    </main>
+    
+
+    <footer>
+        <span>Created By</span>
+        <img class='logo' src="https://raw.githubusercontent.com/celline1637/1/main/%ED%88%AC%EB%AA%85%EA%B3%B0.png
+" alt="logo"> 
+    </footer>
+
+   <script src="todo2.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,232 @@
+:root {
+  /* color */
+  --yellow: #ffe268;
+  --blue: #a7c5eb;
+  --green: #99bbad;
+
+  /* size */
+  --style-btn-sixe: 40px;
+  --base-margin: 38px;
+  --menu-btns-margin: 20px;
+  --menu-padding: 4px;
+  --todo-box-width: 260px;
+  --todo-box-height: 300px;
+  --todo-btn: 18px;
+  --todo-base-height: 38px;
+}
+* {
+  font-family: "Permanent Marker", "Gaegu", cursive;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.todo-box:nth-of-type(3n + 1) {
+  background-color: var(--yellow);
+}
+.todo-box:nth-of-type(3n + 2) {
+  background-color: var(--blue);
+}
+.todo-box:nth-of-type(3n) {
+  background-color: var(--green);
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* header */
+header {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  width: 300px;
+  text-align: center;
+  font-size: 42px;
+  margin-top: var(--base-margin);
+  margin-bottom: var(--base-margin);
+}
+
+.title-area {
+  width: 185px;
+  height: 30px;
+  border-style: none;
+  outline: none;
+  font-size: 20px;
+}
+
+.title-form {
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.add {
+  margin-right: 10px;
+  outline: none;
+  border-style: none;
+  width: 33px;
+
+  text-align: center;
+  font-size: 24px;
+  border-radius: 50%;
+}
+.add:hover {
+  background-color: lightgray;
+  transform: scale(1.2);
+}
+/* main */
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 80%;
+  height: 80vh;
+}
+.todo-cont {
+  width: 80%;
+  height: 46vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: scroll;
+}
+
+.col {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 230px;
+}
+.col > button {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border-style: none;
+  outline: none;
+  margin-left: 10px;
+  transition: ease-in;
+}
+.col > button:hover {
+  transform: scale(0.9);
+}
+
+.yellow {
+  background-color: var(--yellow);
+}
+
+.blue {
+  background-color: var(--blue);
+}
+
+.green {
+  background-color: var(--green);
+}
+
+.todo-box {
+  /* margin-left: 20px; */
+  width: var(--todo-box-width);
+  height: var(--todo-box-height);
+  background-color: var(--yellow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 4px;
+}
+
+.init {
+  display: none;
+}
+
+.todo-head {
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  align-content: flex-end;
+  justify-content: space-between;
+  font-size: 24px;
+}
+
+.date {
+  font-size: 14px;
+}
+.list-form {
+  width: 184px;
+  display: flex;
+  justify-content: space-between;
+}
+.input-area {
+  outline: none;
+  border-style: none;
+  width: 155px;
+  font-size: 16px;
+}
+
+.list-form > button {
+  border-style: none;
+  border-radius: 50%;
+  margin-left: 10px;
+  padding: 3px;
+}
+
+ul {
+  width: 160px;
+  height: 136px;
+  overflow: scroll;
+}
+
+.done {
+  text-decoration: line-through;
+  text-decoration-color: darkred;
+  text-decoration-thickness: 4px;
+}
+
+li {
+  list-style-position: inside;
+  list-style: none;
+}
+li::before {
+  content: "☐ ";
+}
+li::after {
+  content: "      🐾";
+}
+
+li:nth-last-of-type(1)::after {
+  content: "       🐻";
+}
+
+/* footer */
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: 80%;
+  height: 20vh;
+}
+span {
+  font-size: 20px;
+}
+.logo {
+  width: 60px;
+  height: 60px;
+}
