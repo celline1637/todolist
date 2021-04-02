@@ -77,7 +77,14 @@ addform.addEventListener('submit', function(e) {
   
     const todoCont = document.querySelector('.todo-cont');
     const colorBtn = document.querySelector('.col');
-    addtitle(title);
+    
+     if (!title) {
+        return alert('Please enter a title for the list // 목록의 이름을 작성해주세요 :)');
+        
+    } else {
+        addtitle(title);
+    }
+    
     todoBox.classList.remove('init');
     todoCont.classList.remove('init');
     colorBtn.classList.remove('init');
